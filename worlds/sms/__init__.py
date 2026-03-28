@@ -49,6 +49,7 @@ class SmsWebWorld(WebWorld):
             options.LevelAccess,
             options.StartingNozzle,
             options.EnableCoinShines,
+            options.NozzleBoxes,
             options.CoronaMountainShines,
             options.BlueCoinSanity,
             options.BlueCoinMaximum,
