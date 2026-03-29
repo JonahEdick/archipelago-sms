@@ -260,6 +260,10 @@ SPROCKET_OR_SPROVER: list[list[str]] = [
     [NozzleType.rocket, NozzleType.spray],
     [NozzleType.hover, NozzleType.spray],
 ]
+SPRAY_AND_HOVER_OR_ROCKET: list[list[str]] = [
+    [NozzleType.rocket],
+    [NozzleType.hover, NozzleType.spray],
+]
 ROCKET_AND_SPRAY_OR_ROCKET_AND_HOVER: list[list[str]] = [
     [NozzleType.rocket, NozzleType.spray],
     [NozzleType.rocket, NozzleType.hover],

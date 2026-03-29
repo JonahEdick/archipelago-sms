@@ -263,14 +263,15 @@ def create_region(region: SmsRegion, world: "SmsWorld"):
                 blue_loc.blue = True
                 curr_region.locations.append(blue_loc)
 
-    for nozzle_box in region.nozzle_boxes:
-        nozzle_loc: SmsLocation = SmsLocation(
-            world,
-            f"{curr_region.name} - {nozzle_box.name}",
-            region,
-            get_correct_requirements(nozzle_box, world.options.difficulty),
-        )
-        curr_region.locations.append(nozzle_loc)
+    if world.options.nozzle_boxes.value:
+        for nozzle_box in region.nozzle_boxes:
+            nozzle_loc: SmsLocation = SmsLocation(
+                world,
+                f"{curr_region.name} - {nozzle_box.name}",
+                region,
+                get_correct_requirements(nozzle_box, world.options.difficulty),
+            )
+            curr_region.locations.append(nozzle_loc)
 
     return curr_region
 
