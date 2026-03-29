@@ -123,7 +123,12 @@ NOKI_BAY_ONE: SmsRegion = SmsRegion(
         ),
     ],
     nozzle_boxes=[
-        NozzleBox("Rocket Box", [Requirements(ROCKET_OR_HOVER)], in_game_bit=884)
+        NozzleBox(
+            "Rocket Box",
+            requirements=[Requirements(ROCKET_OR_HOVER)],
+            tears=[Requirements(ROCKET_OR_HOVER_OR_TURBO)],
+            in_game_bit=884,
+        )
     ],
     parent_region=SmsRegionName.NOKI_ENTRANCE,
 )
@@ -253,7 +258,12 @@ NOKI_BAY_SIX: SmsRegion = SmsRegion(
         ),
     ],
     nozzle_boxes=[
-        NozzleBox("Turbo Box", [Requirements([[NozzleType.hover]])], in_game_bit=885)
+        NozzleBox(
+            "Turbo Box",
+            requirements=[Requirements([[NozzleType.hover]])],
+            hard=[Requirements(manual_none=True)],
+            in_game_bit=885,
+        )
     ],
     parent_region=SmsRegionName.NOKI_ENTRANCE,
 )

@@ -330,7 +330,18 @@ GELATO_BEACH_FIVE: SmsRegion = SmsRegion(
         )
     ],
     nozzle_boxes=[
-        NozzleBox("Rocket Box", [Requirements(ROCKET_OR_SPLASHER)], in_game_bit=876)
+        NozzleBox(
+            "Rocket Box",
+            requirements=[
+                Requirements(ANY_FLUDD),
+                Requirements(
+                    ANY_NOZZLE,
+                    f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                ),
+            ],
+            hard=[Requirements(manual_none=True)],
+            in_game_bit=876,
+        )
     ],
     parent_region=SmsRegionName.GELATO_ENTRANCE,
 )

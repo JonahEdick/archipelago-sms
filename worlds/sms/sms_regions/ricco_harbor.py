@@ -296,7 +296,12 @@ RICCO_HARBOR_THREE: SmsRegion = SmsRegion(
         BlueCoin("Mesh Ceiling Klamber", in_game_bit=244),
     ],
     nozzle_boxes=[
-        NozzleBox("Rocket Box", [Requirements([[NozzleType.hover]])], in_game_bit=874)
+        NozzleBox(
+            "Rocket Box",
+            requirements=[Requirements(ROCKET_OR_HOVER)],
+            hard=[Requirements(manual_none=True)],
+            in_game_bit=874,
+        )
     ],
     parent_region=SmsRegionName.RICCO_ENTRANCE,
 )
@@ -407,6 +412,5 @@ RICCO_HARBOR_EIGHT: SmsRegion = SmsRegion(
             in_game_bit=245,
         ),
     ],
-    nozzle_boxes=[NozzleBox("Turbo Box", in_game_bit=875)],
     parent_region=SmsRegionName.RICCO_ENTRANCE,
 )

@@ -525,7 +525,12 @@ BIANCO_HILLS_SIX: SmsRegion = SmsRegion(
         BlueCoin("Chuckster Momma", in_game_bit=193),
     ],
     nozzle_boxes=[
-        NozzleBox("Turbo Box", [Requirements(SPRAY_OR_HOVER)], in_game_bit=873)
+        NozzleBox(
+            "Turbo Box",
+            requirements=[Requirements(SPRAY_OR_HOVER)],
+            hard=[Requirements(ANY_FLUDD)],
+            in_game_bit=873,
+        )
     ],
     parent_region=SmsRegionName.BIANCO_ENTRANCE,
 )

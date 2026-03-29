@@ -425,7 +425,12 @@ PIANTA_VILLAGE_EIGHT: SmsRegion = SmsRegion(
         )
     ],
     nozzle_boxes=[
-        NozzleBox("Rocket Box", [Requirements([[NozzleType.hover]])], in_game_bit=882)
+        NozzleBox(
+            "Rocket Box",
+            requirements=[Requirements(ROCKET_OR_HOVER)],
+            hard=[Requirements(manual_none=True)],
+            in_game_bit=882,
+        )
     ],
     parent_region=SmsRegionName.PIANTA_ENTRANCE,
 )
