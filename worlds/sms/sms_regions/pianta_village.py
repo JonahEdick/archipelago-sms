@@ -419,7 +419,7 @@ PIANTA_VILLAGE_EIGHT: SmsRegion = SmsRegion(
         BlueCoin(
             "Bird",
             requirements=[Requirements(SPRAY_AND_HOVER)],
-            hard=[Requirements(NozzleType.spray)],
+            hard=[Requirements([[NozzleType.spray]])],
             tears=[Requirements(SPRAY_OR_HOVER)],
             in_game_bit=441,
         )

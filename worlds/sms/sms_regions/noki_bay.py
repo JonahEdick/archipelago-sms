@@ -59,24 +59,24 @@ NOKI_BAY_ONE: SmsRegion = SmsRegion(
         BlueCoin(
             "Bottom Pulley",
             requirements=[Requirements(SPRAY_AND_HOVER)],
-            hard=[Requirements(NozzleType.spray)],
+            hard=[Requirements([[NozzleType.spray]])],
             in_game_bit=474,
         ),
         BlueCoin(
             "Top Pulley",
             requirements=[Requirements(SPRAY_AND_HOVER)],
-            hard=[Requirements(NozzleType.spray)],
+            hard=[Requirements([[NozzleType.spray]])],
             in_game_bit=475,
         ),
         BlueCoin(
             "Tall Alcove",
-            requirements=[Requirements(NozzleType.hover)],
+            requirements=[Requirements([[NozzleType.hover]])],
             hard=[Requirements(manual_none=True)],
             in_game_bit=476,
         ),
         BlueCoin(
             "Turbo Alcove",
-            requirements=[Requirements(NozzleType.hover)],
+            requirements=[Requirements([[NozzleType.hover]])],
             hard=[Requirements(manual_none=True)],
             in_game_bit=477,
         ),
@@ -118,7 +118,7 @@ NOKI_BAY_ONE: SmsRegion = SmsRegion(
         BlueCoin(
             "Top Secret Path M",
             requirements=[Requirements(SPRAY_AND_HOVER)],
-            hard=[Requirements(NozzleType.spray)],
+            hard=[Requirements([[NozzleType.spray]])],
             in_game_bit=493,
         ),
     ],
