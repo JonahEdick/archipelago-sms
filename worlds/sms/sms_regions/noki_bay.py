@@ -28,17 +28,61 @@ NOKI_BAY_ONE: SmsRegion = SmsRegion(
         ),
     ],
     blue_coins=[
-        BlueCoin("Rocket Alcove", [Requirements(ROCKET_OR_HOVER)], in_game_bit=470),
         BlueCoin(
-            "Bottom Secret Path", [Requirements(SPRAY_AND_HOVER)], in_game_bit=471
+            "Rocket Alcove",
+            requirements=[Requirements(ROCKET_OR_HOVER)],
+            tears=[Requirements(ROCKET_OR_HOVER_OR_TURBO)],
+            in_game_bit=470,
         ),
-        BlueCoin("Top Secret Path", [Requirements(SPRAY_AND_HOVER)], in_game_bit=472),
-        BlueCoin("Rocket", [Requirements([[NozzleType.rocket]])], in_game_bit=473),
-        BlueCoin("Bottom Pulley", [Requirements(SPRAY_AND_HOVER)], in_game_bit=474),
-        BlueCoin("Top Pulley", [Requirements(SPRAY_AND_HOVER)], in_game_bit=475),
-        BlueCoin("Tall Alcove", [Requirements(SPRAY_AND_HOVER)], in_game_bit=476),
-        BlueCoin("Turbo Alcove", [Requirements([[NozzleType.hover]])], in_game_bit=477),
-        BlueCoin("Shell Alcove", [Requirements([[NozzleType.hover]])], in_game_bit=478),
+        BlueCoin(
+            "Bottom Secret Path",
+            requirements=[Requirements(SPRAY_AND_HOVER)],
+            hard=[Requirements([[NozzleType.spray]])],
+            in_game_bit=471,
+        ),
+        BlueCoin(
+            "Top Secret Path",
+            requirements=[Requirements(SPRAY_AND_HOVER)],
+            hard=[Requirements([[NozzleType.spray]])],
+            in_game_bit=472,
+        ),
+        BlueCoin(
+            "Rocket",
+            requirements=[Requirements([[NozzleType.rocket]])],
+            tears=[Requirements(ROCKET_OR_TURBO)],
+            in_game_bit=473,
+        ),
+        BlueCoin(
+            "Bottom Pulley",
+            requirements=[Requirements(SPRAY_AND_HOVER)],
+            hard=[Requirements(NozzleType.spray)],
+            in_game_bit=474,
+        ),
+        BlueCoin(
+            "Top Pulley",
+            requirements=[Requirements(SPRAY_AND_HOVER)],
+            hard=[Requirements(NozzleType.spray)],
+            in_game_bit=475,
+        ),
+        BlueCoin(
+            "Tall Alcove",
+            requirements=[Requirements(NozzleType.hover)],
+            hard=[Requirements(manual_none=True)],
+            in_game_bit=476,
+        ),
+        BlueCoin(
+            "Turbo Alcove",
+            requirements=[Requirements(NozzleType.hover)],
+            hard=[Requirements(manual_none=True)],
+            in_game_bit=477,
+        ),
+        BlueCoin(
+            "Shell Alcove",
+            requirements=[Requirements([[NozzleType.hover]])],
+            hard=[Requirements(ROCKET_OR_HOVER)],
+            tears=[Requirements(ROCKET_OR_HOVER_OR_TURBO)],
+            in_game_bit=478,
+        ),
         BlueCoin("Top Right Panel", [Requirements(SPRAY_AND_HOVER)], in_game_bit=479),
         BlueCoin("Bottom Left Panel", [Requirements(SPRAY_AND_HOVER)], in_game_bit=480),
         BlueCoin("Top Right Tunnel", [Requirements(SPRAY_AND_HOVER)], in_game_bit=481),
@@ -54,10 +98,25 @@ NOKI_BAY_ONE: SmsRegion = SmsRegion(
         ),
         BlueCoin("Bird Cliff Panel", [Requirements(SPRAY_AND_HOVER)], in_game_bit=486),
         BlueCoin("Bird Cliff Alcove", [Requirements(SPRAY_AND_HOVER)], in_game_bit=487),
-        BlueCoin("Spawn", [Requirements([[NozzleType.spray]])], in_game_bit=490),
-        BlueCoin("Coast", [Requirements([[NozzleType.spray]])], in_game_bit=491),
+        BlueCoin(
+            "Spawn",
+            requirements=[Requirements(SPRAY_OR_HOVER)],
+            advanced=[Requirements(manual_none=True)],
+            in_game_bit=490,
+        ),  # With clear water, this is easy with turbo
+        BlueCoin(
+            "Coast",
+            requirements=[Requirements(SPRAY_OR_HOVER)],
+            advanced=[Requirements(manual_none=True)],
+            in_game_bit=491,
+        ),
         BlueCoin("Underwater", in_game_bit=492),
-        BlueCoin("Top Secret Path M", [Requirements(SPRAY_AND_HOVER)], in_game_bit=493),
+        BlueCoin(
+            "Top Secret Path M",
+            requirements=[Requirements(SPRAY_AND_HOVER)],
+            hard=[Requirements(NozzleType.spray)],
+            in_game_bit=493,
+        ),
     ],
     nozzle_boxes=[
         NozzleBox("Rocket Box", [Requirements(ROCKET_OR_HOVER)], in_game_bit=884)
@@ -176,8 +235,18 @@ NOKI_BAY_SIX: SmsRegion = SmsRegion(
         ),
     ],
     blue_coins=[
-        BlueCoin("Spawn O", [Requirements(TURSPRAY)], in_game_bit=494),
-        BlueCoin("Boathouse O", [Requirements(TURSPRAY)], in_game_bit=498),
+        BlueCoin(
+            "Spawn O",
+            [Requirements(SPRAY_AND_TURBO_OR_HOVER_AND_TURBO)],
+            [Requirements(SPRAY_OR_HOVER_OR_TURBO)],
+            in_game_bit=494,
+        ),
+        BlueCoin(
+            "Boathouse O",
+            [Requirements(SPRAY_AND_TURBO_OR_HOVER_AND_TURBO)],
+            [Requirements(SPRAY_OR_HOVER_OR_TURBO)],
+            in_game_bit=498,
+        ),
     ],
     nozzle_boxes=[
         NozzleBox("Turbo Box", [Requirements([[NozzleType.hover]])], in_game_bit=885)
