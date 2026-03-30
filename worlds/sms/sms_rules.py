@@ -147,7 +147,7 @@ def interpret_requirements(
                         spot,
                         (
                             lambda state, all_rules=tuple(req_rules): any(
-                                req_rule(state) for req_rule in req_rules
+                                req_rule(state) for req_rule in all_rules
                             )
                         ),
                         combine="or",
@@ -157,7 +157,7 @@ def interpret_requirements(
                         spot,
                         (
                             lambda state, all_rules=tuple(req_rules): any(
-                                req_rule(state) for req_rule in req_rules
+                                req_rule(state) for req_rule in all_rules
                             )
                         ),
                     )
@@ -180,7 +180,7 @@ def interpret_requirements(
                         spot,
                         (
                             lambda state, all_rules=tuple(req_rules): all(
-                                req_rule(state) for req_rule in req_rules
+                                req_rule(state) for req_rule in all_rules
                             )
                         ),
                         combine="or",
@@ -190,7 +190,7 @@ def interpret_requirements(
                         spot,
                         (
                             lambda state, all_rules=tuple(req_rules): all(
-                                req_rule(state) for req_rule in req_rules
+                                req_rule(state) for req_rule in all_rules
                             )
                         ),
                     )
