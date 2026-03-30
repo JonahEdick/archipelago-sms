@@ -18,25 +18,38 @@ BIANCO_HILLS_ONE: SmsRegion = SmsRegion(
             in_game_bit=0,
         ),
         Shine(
-            "100 Coins",  # TODO: This can be much more thorough
+            "100 Coins",
             requirements=[
+                Requirements(
+                    [[NozzleType.hover]],
+                    location=f"{SmsRegionName.BIANCO_ONE} - Road to the Big Windmill",
+                ),
                 Requirements(
                     SPRAY_OR_HOVER,
                     location=f"{SmsRegionName.BIANCO_TWO} - Down with Petey Piranha!",
                 ),
+                Requirements(
+                    [NozzleType.yoshi],
+                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                ),
             ],
             hard=[
+                Requirements([[NozzleType.hover]]),
+                Requirements(
+                    SPRAY_OR_HOVER,
+                    location=f"{SmsRegionName.BIANCO_ONE} - Road to the Big Windmill",
+                ),
+                Requirements(
+                    SPRAY_OR_HOVER,
+                    location=f"{SmsRegionName.BIANCO_ONE} - Road to the Big Windmill",
+                ),
                 Requirements(
                     SPRAY_OR_HOVER_OR_TURBO,
-                    location=f"{SmsRegionName.BIANCO_TWO} - Down with Petey Piranha!",
+                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
                 ),
             ],
             advanced=[
-                Requirements(SPRAY_OR_HOVER),
-                Requirements(
-                    SPRAY_OR_HOVER_OR_TURBO,
-                    location=f"{SmsRegionName.BIANCO_TWO} - Down with Petey Piranha!",
-                ),
+                Requirements(SPRAY_OR_HOVER_OR_TURBO),
             ],
             hundred=True,
             in_game_bit=100,
@@ -408,7 +421,7 @@ BIANCO_HILLS_FIVE: SmsRegion = SmsRegion(
     shines=[
         Shine(
             "Petey Piranha Strikes Back",
-            requirements=[Requirements(SPRAY_AND_ROCKET_OR_SPRAY_AND_HOVER)],
+            requirements=[Requirements(SPROCKET_OR_SPROVER)],
             hard=[Requirements([[NozzleType.spray]])],
             in_game_bit=4,
         )
@@ -512,7 +525,12 @@ BIANCO_HILLS_SIX: SmsRegion = SmsRegion(
         BlueCoin("Chuckster Momma", in_game_bit=193),
     ],
     nozzle_boxes=[
-        NozzleBox("Turbo Box", [Requirements(SPRAY_OR_HOVER)], in_game_bit=873)
+        NozzleBox(
+            "Turbo Box",
+            requirements=[Requirements(SPRAY_OR_HOVER)],
+            hard=[Requirements(ANY_FLUDD)],
+            in_game_bit=873,
+        )
     ],
     parent_region=SmsRegionName.BIANCO_ENTRANCE,
 )

@@ -20,6 +20,18 @@ RICCO_HARBOR_ONE: SmsRegion = SmsRegion(
             advanced=[Requirements(ANY_FLUDD)],
             in_game_bit=10,
         ),
+        Shine(
+            "100 Coins",
+            requirements=[
+                Requirements(ROCKET_OR_HOVER),
+                Requirements(
+                    location=f"{SmsRegionName.RICCO_FOUR} - The Secret of Ricco Tower"
+                ),
+            ],
+            hard=[Requirements(manual_none=True)],
+            hundred=True,
+            in_game_bit=101,
+        ),
     ],
     blue_coins=[
         BlueCoin(
@@ -278,20 +290,18 @@ RICCO_HARBOR_THREE: SmsRegion = SmsRegion(
             hard=[Requirements(manual_none=True)],
             in_game_bit=12,
         ),
-        Shine(
-            "100 Coins",
-            requirements=[Requirements([[NozzleType.hover]])],
-            hard=[Requirements(manual_none=True)],
-            hundred=True,
-            in_game_bit=101,
-        ),
     ],
     blue_coins=[
         BlueCoin("Mesh Wall Klamber", in_game_bit=243),
         BlueCoin("Mesh Ceiling Klamber", in_game_bit=244),
     ],
     nozzle_boxes=[
-        NozzleBox("Rocket Box", [Requirements([[NozzleType.hover]])], in_game_bit=874)
+        NozzleBox(
+            "Rocket Box",
+            requirements=[Requirements(ROCKET_OR_HOVER)],
+            hard=[Requirements(manual_none=True)],
+            in_game_bit=874,
+        )
     ],
     parent_region=SmsRegionName.RICCO_ENTRANCE,
 )
@@ -397,11 +407,10 @@ RICCO_HARBOR_EIGHT: SmsRegion = SmsRegion(
         BlueCoin(
             "Fish Basket",
             requirements=[Requirements(ANY_SPLASHER)],
-            hard=[Requirements(SPRAY_OR_HOVER_OR_TURBO_OR_YOSHI)],
+            hard=[Requirements(ANY_SPLASHER_OR_TURBO)],
             advanced=[Requirements(ANY_NOZZLE)],
             in_game_bit=245,
         ),
     ],
-    nozzle_boxes=[NozzleBox("Turbo Box", in_game_bit=875)],
     parent_region=SmsRegionName.RICCO_ENTRANCE,
 )

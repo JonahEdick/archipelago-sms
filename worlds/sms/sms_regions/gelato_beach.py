@@ -1,4 +1,5 @@
 from .sms_region_helper import *
+from .sms_region_helper import SPRAY_OR_HOVER
 
 GELATO_BEACH_ENTRANCE: SmsRegion = SmsRegion(
     SmsRegionName.GELATO_ENTRANCE,
@@ -33,7 +34,7 @@ GELATO_BEACH_ONE: SmsRegion = SmsRegion(
         Shine(
             "100 Coins",
             requirements=[
-                Requirements(SPROCKET_OR_HOVER),
+                Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     SPRAY_OR_HOVER_OR_ROCKET,
                     location=f"{SmsRegionName.GELATO_SEVEN} - It's Shadow Mario! After Him!",
@@ -41,6 +42,35 @@ GELATO_BEACH_ONE: SmsRegion = SmsRegion(
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER),
+                Requirements(
+                    [[NozzleType.rocket]],
+                    location=f"{SmsRegionName.GELATO_SIX} - Red Coins in the Coral Reef",
+                ),
+                Requirements(
+                    [[NozzleType.turbo]],
+                    location=f"{SmsRegionName.GELATO_SEVEN} - It's Shadow Mario! After Him!",
+                ),
+            ],
+            advanced=[
+                Requirements(SPRAY_OR_HOVER),
+                Requirements(
+                    [[NozzleType.rocket]],
+                    location=f"{SmsRegionName.GELATO_SIX} - Red Coins in the Coral Reef",
+                ),
+                Requirements(
+                    location=f"{SmsRegionName.GELATO_SEVEN} - It's Shadow Mario! After Him!",
+                ),
+            ],
+            tears=[
+                Requirements(SPRAY_OR_HOVER),
+                Requirements(
+                    [[NozzleType.turbo]],
+                    location=f"{SmsRegionName.GELATO_THREE} - Wiggler Ahoy! Full Steam Ahead!",
+                ),
+                Requirements(
+                    [[NozzleType.rocket]],
+                    location=f"{SmsRegionName.GELATO_SIX} - Red Coins in the Coral Reef",
+                ),
                 Requirements(
                     location=f"{SmsRegionName.GELATO_SEVEN} - It's Shadow Mario! After Him!",
                 ),
@@ -311,7 +341,18 @@ GELATO_BEACH_FIVE: SmsRegion = SmsRegion(
         )
     ],
     nozzle_boxes=[
-        NozzleBox("Rocket Box", [Requirements(ROCKET_OR_SPLASHER)], in_game_bit=876)
+        NozzleBox(
+            "Rocket Box",
+            requirements=[
+                Requirements(ANY_FLUDD),
+                Requirements(
+                    ANY_NOZZLE,
+                    f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                ),
+            ],
+            hard=[Requirements(manual_none=True)],
+            in_game_bit=876,
+        )
     ],
     parent_region=SmsRegionName.GELATO_ENTRANCE,
 )

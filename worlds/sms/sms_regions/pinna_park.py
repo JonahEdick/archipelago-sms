@@ -17,35 +17,314 @@ PINNA_PARK_ONE: SmsRegion = SmsRegion(
         ),
     ],
     blue_coins=[
-        BlueCoin("Tree Sand Shine", [Requirements(ANY_SPLASHER)], in_game_bit=348),
-        BlueCoin("Cannon Sand Shine", [Requirements(ANY_SPLASHER)], in_game_bit=349),
-        BlueCoin("Orange Wall M", [Requirements(ANY_SPLASHER)], in_game_bit=320),
-        BlueCoin("Sand M", [Requirements(ANY_SPLASHER)], in_game_bit=321),
-        BlueCoin("Green Clam", [Requirements(ANY_SPLASHER)], in_game_bit=322),
-        BlueCoin("Left O", [Requirements(ANY_SPLASHER)], in_game_bit=323),
         BlueCoin(
-            "Entrance Bird", [Requirements([[NozzleType.spray]])], in_game_bit=324
+            "Tree Sand Shine",
+            requirements=[Requirements(ANY_SPLASHER)],
+            advanced=[Requirements(ANY_SPLASHER_OR_TURBO)],
+            in_game_bit=348,
         ),
         BlueCoin(
-            "Pineapple Bird", [Requirements([[NozzleType.spray]])], in_game_bit=325
+            "Cannon Sand Shine",
+            requirements=[Requirements(ANY_SPLASHER)],
+            advanced=[Requirements(ANY_SPLASHER_OR_TURBO)],
+            in_game_bit=349,
         ),
-        BlueCoin("Ship Peak", [Requirements([[NozzleType.hover]])], in_game_bit=326),
         BlueCoin(
-            "Cage Platform", [Requirements([[NozzleType.hover]])], in_game_bit=327
+            "Orange Wall M",
+            requirements=[
+                Requirements(SPRAY_OR_HOVER),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            hard=[
+                Requirements(SPRAY_OR_HOVER_OR_TURBO),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            in_game_bit=320,
         ),
-        BlueCoin("Right O", [Requirements(ANY_SPLASHER)], in_game_bit=328),
-        BlueCoin("White Wall X", [Requirements([[NozzleType.spray]])], in_game_bit=329),
-        BlueCoin("Tree X", [Requirements([[NozzleType.spray]])], in_game_bit=330),
-        BlueCoin("Ferris M", [Requirements(ANY_SPLASHER)], in_game_bit=331),
-        BlueCoin("Banana Triangle", [Requirements(ANY_SPLASHER)], in_game_bit=332),
-        BlueCoin("Ferris Triangle", [Requirements(ANY_SPLASHER)], in_game_bit=333),
-        BlueCoin("Stairs", [Requirements([[NozzleType.hover]])], in_game_bit=334),
-        BlueCoin("Girder", [Requirements([[NozzleType.hover]])], in_game_bit=336),
         BlueCoin(
-            "Coaster Ledge", [Requirements([[NozzleType.hover]])], in_game_bit=337
+            "Sand M",
+            requirements=[
+                Requirements(SPRAY_OR_HOVER),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            hard=[
+                Requirements(SPRAY_OR_HOVER_OR_TURBO),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            in_game_bit=321,
         ),
-        BlueCoin("Cage", [Requirements([[NozzleType.hover]])], in_game_bit=338),
-        BlueCoin("Stackin Stus", [Requirements(SPRAY_OR_HOVER)], in_game_bit=339),
+        BlueCoin(
+            "Green Clam",
+            requirements=[
+                Requirements(SPRAY_OR_HOVER),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            hard=[
+                Requirements(SPRAY_OR_HOVER_OR_TURBO),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            in_game_bit=322,
+        ),
+        BlueCoin(
+            "Left O",
+            requirements=[
+                Requirements([[NozzleType.spray]]),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            hard=[
+                Requirements(SPRAY_OR_HOVER),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            advanced=[
+                Requirements(SPRAY_OR_HOVER_OR_TURBO),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            in_game_bit=323,
+        ),
+        BlueCoin(
+            "Entrance Bird",
+            requirements=[
+                Requirements([[NozzleType.spray]]),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            tears=[
+                Requirements(SPRAY_OR_HOVER),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            in_game_bit=324,
+        ),
+        BlueCoin(
+            "Pineapple Bird",
+            requirements=[
+                Requirements([[NozzleType.spray]]),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            tears=[
+                Requirements(SPRAY_OR_HOVER),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            in_game_bit=325,
+        ),
+        BlueCoin(
+            "Ship Peak",
+            requirements=[Requirements([[NozzleType.hover]])],
+            hard=[Requirements(manual_none=True)],
+            in_game_bit=326,
+        ),
+        BlueCoin(
+            "Cage Platform",
+            requirements=[Requirements([[NozzleType.hover]])],
+            hard=[Requirements(manual_none=True)],
+            in_game_bit=327,
+        ),
+        BlueCoin(
+            "Right O",
+            requirements=[
+                Requirements([[NozzleType.spray]]),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            hard=[
+                Requirements(SPRAY_OR_HOVER),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            advanced=[
+                Requirements(SPRAY_OR_HOVER_OR_TURBO),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            in_game_bit=328,
+        ),
+        BlueCoin(
+            "White Wall X",
+            requirements=[
+                Requirements([[NozzleType.spray]]),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            hard=[
+                Requirements(SPRAY_OR_HOVER),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            advanced=[
+                Requirements(SPRAY_OR_HOVER_OR_TURBO),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            in_game_bit=329,
+        ),
+        BlueCoin(
+            "Tree X",
+            requirements=[
+                Requirements([[NozzleType.spray]]),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            hard=[
+                Requirements(SPRAY_OR_HOVER),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            advanced=[
+                Requirements(SPRAY_OR_HOVER_OR_TURBO),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            in_game_bit=330,
+        ),
+        BlueCoin(
+            "Ferris M",
+            [
+                Requirements(SPRAY_OR_HOVER),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            in_game_bit=331,
+        ),
+        BlueCoin(
+            "Banana Triangle",
+            requirements=[
+                Requirements(SPRAY_AND_HOVER),
+            ],
+            hard=[
+                Requirements(SPRAY_OR_HOVER),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            advanced=[
+                Requirements(SPRAY_OR_HOVER_OR_TURBO),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            in_game_bit=332,
+        ),
+        BlueCoin(
+            "Ferris Triangle",
+            requirements=[
+                Requirements([[NozzleType.spray]]),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            hard=[
+                Requirements(SPRAY_OR_HOVER),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            advanced=[
+                Requirements(SPRAY_OR_HOVER_OR_TURBO),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            in_game_bit=333,
+        ),
+        BlueCoin(
+            "Stairs",
+            requirements=[Requirements([[NozzleType.hover]])],
+            hard=[Requirements(manual_none=True)],
+            in_game_bit=334,
+        ),
+        BlueCoin(
+            "Girder",
+            requirements=[Requirements([[NozzleType.hover]])],
+            hard=[Requirements(manual_none=True)],
+            in_game_bit=336,
+        ),
+        BlueCoin("Coaster Ledge", in_game_bit=337),
+        BlueCoin(
+            "Cage",
+            requirements=[Requirements([[NozzleType.hover]])],
+            hard=[Requirements(manual_none=True)],
+            in_game_bit=338,
+        ),
+        BlueCoin(
+            "Stackin Stus",
+            requirements=[
+                Requirements(SPRAY_OR_HOVER),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            hard=[
+                Requirements(SPRAY_OR_HOVER_OR_TURBO),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                ),
+            ],
+            in_game_bit=339,
+        ),
         BlueCoin(
             "Beach Butterfly A", [Requirements([[NozzleType.yoshi]])], in_game_bit=343
         ),
@@ -85,7 +364,9 @@ PINNA_PARK_TWO: SmsRegion = SmsRegion(
         ),
         Shine(
             "100 Coins",
-            [Requirements([[NozzleType.spray]])],
+            requirements=[Requirements(SPRAY_OR_HOVER)],
+            hard=[Requirements(SPRAY_OR_HOVER_OR_TURBO)],
+            tears=[Requirements(manual_none=True)],
             hundred=True,
             in_game_bit=103,
         ),
