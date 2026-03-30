@@ -197,15 +197,75 @@ GELATO_BEACH_ONE: SmsRegion = SmsRegion(
         BlueCoin("Big Tree", in_game_bit=290),
         BlueCoin("Crevice", in_game_bit=291),
         BlueCoin("Sand Cabana Roof", in_game_bit=293),
-        BlueCoin("Shack", [Requirements([[NozzleType.rocket]])], in_game_bit=294),
-        BlueCoin("Red Cataquack", [Requirements(SPRAY_OR_HOVER)], in_game_bit=270),
-        BlueCoin("Sand Shine at Sand Cabana", [Requirements(SPRAY_OR_HOVER)], in_game_bit=271),
-        BlueCoin("Sand Shine at Surf Cabana", [Requirements(SPRAY_OR_HOVER)], in_game_bit=272),
-        BlueCoin("Middle Sand Shine", [Requirements(SPRAY_OR_HOVER)], in_game_bit=274),
+        BlueCoin(
+            "Shack",
+            requirements=[Requirements([[NozzleType.rocket]])],
+            hard=[Requirements(ROCKET_OR_HOVER)],
+            advanced=[Requirements(SPRAY_OR_HOVER_OR_ROCKET)],
+            in_game_bit=294,
+        ),
+        BlueCoin(
+            "Red Cataquack",
+            requirements=[Requirements(SPRAY_OR_HOVER_OR_TURBO)],
+            hard=[Requirements(manual_none=True)],
+            in_game_bit=270,
+        ),
+        BlueCoin(
+            "Sand Shine at Sand Cabana",
+            requirements=[
+                Requirements(SPRAY_OR_HOVER),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                ),
+            ],
+            hard=[
+                Requirements(SPRAY_OR_HOVER_OR_TURBO),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                ),
+            ],
+            in_game_bit=271,
+        ),
+        BlueCoin(
+            "Sand Shine at Surf Cabana",
+            requirements=[
+                Requirements(SPRAY_OR_HOVER),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                ),
+            ],
+            hard=[
+                Requirements(SPRAY_OR_HOVER_OR_TURBO),
+                Requirements(
+                    [[NozzleType.yoshi]],
+                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                ),
+            ],
+            in_game_bit=272,
+        ),
+        BlueCoin(
+            "Middle Sand Shine",
+            requirements=[Requirements(SPRAY_OR_HOVER)],
+            hard=[Requirements(SPRAY_OR_HOVER_OR_TURBO)],
+            in_game_bit=274,
+        ),
         BlueCoin("Close Underwater", in_game_bit=284),
         BlueCoin("Far Underwater", in_game_bit=285),
-        BlueCoin("Blue Fish", [Requirements([[NozzleType.turbo]])], in_game_bit=286),
-        BlueCoin("Red Fish", [Requirements([[NozzleType.turbo]])], in_game_bit=287),
+        BlueCoin(
+            "Blue Fish",
+            requirements=[Requirements([[NozzleType.turbo]])],
+            hard=[Requirements(manual_none=True)],
+            in_game_bit=286,
+        ),
+        BlueCoin(
+            "Red Fish",
+            requirements=[Requirements([[NozzleType.turbo]])],
+            hard=[Requirements(manual_none=True)],
+            in_game_bit=287,
+        ),
     ],
     parent_region=SmsRegionName.GELATO_ENTRANCE,
 )
