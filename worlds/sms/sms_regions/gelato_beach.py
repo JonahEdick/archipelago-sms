@@ -1,4 +1,5 @@
 from .sms_region_helper import *
+from .sms_region_helper import SPRAY_OR_HOVER
 
 GELATO_BEACH_ENTRANCE: SmsRegion = SmsRegion(
     SmsRegionName.GELATO_ENTRANCE,
@@ -196,6 +197,15 @@ GELATO_BEACH_ONE: SmsRegion = SmsRegion(
         BlueCoin("Big Tree", in_game_bit=290),
         BlueCoin("Crevice", in_game_bit=291),
         BlueCoin("Sand Cabana Roof", in_game_bit=293),
+        BlueCoin("Shack", [Requirements([[NozzleType.rocket]])], in_game_bit=294),
+        BlueCoin("Red Cataquack", [Requirements(SPRAY_OR_HOVER)], in_game_bit=270),
+        BlueCoin("Sand Shine at Sand Cabana", [Requirements(SPRAY_OR_HOVER)], in_game_bit=271),
+        BlueCoin("Sand Shine at Surf Cabana", [Requirements(SPRAY_OR_HOVER)], in_game_bit=272),
+        BlueCoin("Middle Sand Shine", [Requirements(SPRAY_OR_HOVER)], in_game_bit=274),
+        BlueCoin("Close Underwater", in_game_bit=284),
+        BlueCoin("Far Underwater", in_game_bit=285),
+        BlueCoin("Blue Fish", [Requirements([[NozzleType.turbo]])], in_game_bit=286),
+        BlueCoin("Red Fish", [Requirements([[NozzleType.turbo]])], in_game_bit=287),
     ],
     parent_region=SmsRegionName.GELATO_ENTRANCE,
 )
@@ -336,7 +346,7 @@ GELATO_BEACH_FIVE: SmsRegion = SmsRegion(
                 Requirements(ANY_FLUDD),
                 Requirements(
                     ANY_NOZZLE,
-                    f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
                 ),
             ],
             hard=[Requirements(manual_none=True)],
