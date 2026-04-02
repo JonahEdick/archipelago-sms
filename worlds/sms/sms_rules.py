@@ -47,11 +47,11 @@ def interpret_requirements(
     any_skip_locs: bool = any([reqs for reqs in requirement_set if reqs.skip_forward])
 
     for single_req in requirement_set:
-        # If entry is set to ticket mode or fludless and this location is not set to skip forward
+        # If entry is set to ticket mode or fluddless and this location is not set to skip forward
         if (skip_forward_locs and any_skip_locs) and not single_req.skip_forward:
             continue
 
-        # Else if entry is NOT set to ticket mode or fludless and this location is set to skip forward
+        # Else if entry is NOT set to ticket mode or fluddless and this location is set to skip forward
         elif not (skip_forward_locs and any_skip_locs) and single_req.skip_forward:
             continue
 
@@ -82,13 +82,19 @@ def interpret_requirements(
         if single_req.shines and world.corona_mountain_shines > 0:
             # Requires X amount of shine sprites to access
             required_shines: int = single_req.shines
-            if single_req.shines > world.corona_mountain_shines:
+
+            # If the required shines is more than the amount required for corona mountain.
+            if required_shines > world.corona_mountain_shines:
                 required_shines = world.corona_mountain_shines
-            req_rules.append(
-                lambda state, shine_req_count=required_shines: state.has(
-                    "Shine Sprite", world.player, shine_req_count
-                )
-            )
+
+            # This is an entrance that has shines and level access is tickets, no shine requirements
+            if isinstance(spot, Entrance) and world.options.level_access == 1:
+                required_shines = 0
+
+            if required_shines > 0:
+                req_rules.append(
+                    lambda state, shine_req_count=required_shines: state.has(
+                        "Shine Sprite", world.player, shine_req_count))
 
         if single_req.blue_coins:
             # Requires X amount of blue coins (event item or actual)
