@@ -4,8 +4,7 @@ from .sms_region_helper import *
 PIANTA_VILLAGE_ENTRANCE: SmsRegion = SmsRegion(
     SmsRegionName.PIANTA_ENTRANCE,
     requirements=[
-        Requirements([[NozzleType.rocket]], shines=10),
-        Requirements([[NozzleType.rocket]], skip_forward=True),
+        Requirements([[NozzleType.rocket]], shines=10)
     ],
     ticketed="Pianta Village Ticket",
     parent_region=SmsRegionName.PLAZA,

@@ -4,7 +4,6 @@ RICCO_HARBOR_ENTRANCE: SmsRegion = SmsRegion(
     SmsRegionName.RICCO_ENTRANCE,
     requirements=[
         Requirements(ANY_SPLASHER, shines=3),
-        Requirements(skip_forward=True),
     ],
     ticketed="Ricco Harbor Ticket",
     parent_region=SmsRegionName.PLAZA,
