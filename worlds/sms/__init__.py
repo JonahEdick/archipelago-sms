@@ -78,8 +78,6 @@ class SmsWorld(World):
     game = "Super Mario Sunshine"
     web = SmsWebWorld()
 
-    data_version = 1
-
     options_dataclass = SmsOptions
     options: SmsOptions
 
