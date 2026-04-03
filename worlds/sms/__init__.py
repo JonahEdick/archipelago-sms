@@ -292,7 +292,7 @@ class SmsWorld(World):
             slot_data[child_option] = getattr(self.options, child_option).value
 
         slot_data["death_link"] = self.options.death_link.value
-        slot_data["ticket_chosen"] = self.ticket_chosen,
+        slot_data["ticket_chosen"] = self.ticket_chosen
         slot_data["seed"] = str(self.multiworld.seed_name)
         return slot_data
 
