@@ -76,7 +76,7 @@ def interpret_requirements(
                     ), current_rule=nozz_rule: current_rule(state) or state.has_all(
                         item_set, world.player
                     )
-            req_rules.append(lambda state: nozz_rule(state))
+            req_rules.append(lambda state, captured_rule=nozz_rule: captured_rule(state))
 
         if single_req.shines and world.corona_mountain_shines > 0:
             # Requires X amount of shine sprites to access
@@ -231,28 +231,3 @@ def create_sms_region_and_entrance_rules(world: "SmsWorld"):
                                 )
                             ),
                         )
-
-                # Force Rocket to never be in Pianta Village
-                if "Pianta" in sms_reg.name:
-                    add_item_rule(
-                        sms_loc,
-                        (
-                            lambda item: item.game != world.game
-                            or (
-                                item.game == world.game and item.name != "Rocket Nozzle"
-                            )
-                        ),
-                    )
-
-                # Force Yoshi never to appear in Sirena 3+
-                if "Sirena" in sms_reg.name and not sms_reg.name in [
-                    "Sirena 1 and 6",
-                    "Sirena 2-8",
-                ]:
-                    add_item_rule(
-                        sms_loc,
-                        (
-                            lambda item: item.game != world.game
-                            or (item.game == world.game and item.name != "Yoshi")
-                        ),
-                    )
