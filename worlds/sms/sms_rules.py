@@ -1,8 +1,8 @@
 from typing import TYPE_CHECKING, Callable
 
-from BaseClasses import Entrance, CollectionState, CollectionRule
+from BaseClasses import Entrance, CollectionState
 from .sms_regions.sms_region_helper import SmsLocation, Requirements
-from ..generic.Rules import set_rule, add_item_rule
+from ..generic.Rules import set_rule, add_item_rule, add_rule
 from .items import TICKET_ITEMS, REGULAR_PROGRESSION_ITEMS
 
 if TYPE_CHECKING:
@@ -138,25 +138,12 @@ def interpret_requirements(
             set_rule(spot, (lambda state, all_rules=tuple(req_rules): all(req_rule(state) for req_rule in all_rules)))
         else:
             if isinstance(spot, SmsLocation):
-                sms_add_rule(spot, (lambda state, all_rules=tuple(req_rules):
+                add_rule(spot, (lambda state, all_rules=tuple(req_rules):
                     all(req_rule(state) for req_rule in req_rules)), combine="or")
             else:
-                sms_add_rule(spot,
+                add_rule(spot,
                     (lambda state, all_rules=tuple(req_rules): all(req_rule(state) for req_rule in req_rules)))
     return
-
-
-def sms_add_rule(spot: SmsLocation | Entrance, rule: CollectionRule, combine="and"):
-    old_rule = spot.access_rule
-    # empty rule, replace instead of add
-    if old_rule is SmsLocation.access_rule or old_rule is Entrance.access_rule:
-        spot.access_rule = rule if combine == "and" else old_rule
-    else:
-        if combine == "and":
-            spot.access_rule = lambda state: rule(state) and old_rule(state)
-        else:
-            spot.access_rule = lambda state: (rule(state)) or old_rule(state)
-
 
 def create_sms_region_and_entrance_rules(world: "SmsWorld"):
     for sms_reg in world.get_regions():
