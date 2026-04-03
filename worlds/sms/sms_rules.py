@@ -201,33 +201,16 @@ def create_sms_region_and_entrance_rules(world: "SmsWorld"):
                 if hasattr(sms_loc, "corona") and sms_loc.corona:
                     # Since Corona requires Spray Nozzle and Hover Nozzle to complete, ensure those items can never
                     # be placed. Additionally, Yoshi is required for basically every late game stage.
-                    required_nozz: list[str] = [
-                        "Spray Nozzle",
-                        "Hover Nozzle",
-                        *TICKET_ITEMS,
-                    ]
-                    add_item_rule(
-                        sms_loc,
-                        (
-                            lambda item, nozzles=tuple(required_nozz): item.game
-                            != world.game
-                            or (
-                                item.game == world.game
-                                and not item.name in required_nozz
-                            )
-                        ),
-                    )
+                    blocked: set[str] = {"Spray Nozzle", "Hover Nozzle", *TICKET_ITEMS}
 
                     # If there is a high amount of progression items, the world is too restrictive for non-macguffin
                     # items to be placed in corona, especially with previous levels required to be beaten.
                     if world.large_shine_count:
-                        add_item_rule(
-                            sms_loc,
-                            (
-                                lambda item: item.game != world.game
-                                or (
-                                    item.game == world.game
-                                    and not item.name in REGULAR_PROGRESSION_ITEMS
-                                )
-                            ),
+                        blocked |= set(REGULAR_PROGRESSION_ITEMS.keys())
+
+                    add_item_rule(
+                        sms_loc,
+                        lambda item, blocked_items=frozenset(sorted(blocked)): (
+                                item.game != world.game or item.name not in blocked_items
                         )
+                    )
