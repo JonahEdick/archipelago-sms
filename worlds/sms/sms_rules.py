@@ -183,7 +183,7 @@ def create_sms_region_and_entrance_rules(world: "SmsWorld"):
                     interpret_requirements(sms_loc, sms_loc.loc_reqs, world)
 
                 # A Region cannot have its own ticket item in ticket mode, so prevent that.
-                if hasattr(sms_reg, "ticket_str") or region_ticket:
+                if world.options.level_access.value == 1 and hasattr(sms_reg, "ticket_str") or region_ticket:
                     reg_ticket: str = (
                         sms_reg.ticket_str
                         if hasattr(sms_reg, "ticket_str")
