@@ -1,8 +1,8 @@
 from typing import TYPE_CHECKING, Callable
 
-from BaseClasses import Entrance, CollectionState
+from BaseClasses import Entrance, CollectionState, CollectionRule
 from .sms_regions.sms_region_helper import SmsLocation, Requirements
-from ..generic.Rules import set_rule, add_rule, add_item_rule
+from ..generic.Rules import set_rule, add_item_rule
 from .items import TICKET_ITEMS, REGULAR_PROGRESSION_ITEMS
 
 if TYPE_CHECKING:
@@ -13,7 +13,6 @@ def interpret_requirements(
     spot: Entrance | SmsLocation,
     requirement_set: list[Requirements],
     world: "SmsWorld",
-    apply_requirements_any: bool = False,
 ) -> None:
     """Correctly applies and interprets custom requirements namedtuple for a given entrance/location."""
     # If a region/location does not have any items required, make the section(s) return no logic.
@@ -119,9 +118,10 @@ def interpret_requirements(
                 )
 
         if (
-            single_req.corona
-            or (hasattr(spot, "corona") and spot.corona)
-            and world.corona_mountain_shines > 0
+            world.corona_mountain_shines > 0 and (
+                single_req.corona or
+                (hasattr(spot, "corona") and spot.corona)
+            )
         ):
             # Player requires all shine sprites that are required to reach corona mountain as well.
             req_rules.append(
@@ -134,73 +134,28 @@ def interpret_requirements(
         if not req_rules:
             continue
 
-        if apply_requirements_any:
-            if (
-                spot.access_rule is SmsLocation.access_rule
-                or spot.access_rule is Entrance.access_rule
-            ):
-                set_rule(
-                    spot,
-                    (
-                        lambda state, all_rules=tuple(req_rules): any(
-                            req_rule(state) for req_rule in all_rules
-                        )
-                    ),
-                )
-            else:
-                if isinstance(spot, SmsLocation):
-                    add_rule(
-                        spot,
-                        (
-                            lambda state, all_rules=tuple(req_rules): any(
-                                req_rule(state) for req_rule in all_rules
-                            )
-                        ),
-                        combine="or",
-                    )
-                else:
-                    add_rule(
-                        spot,
-                        (
-                            lambda state, all_rules=tuple(req_rules): any(
-                                req_rule(state) for req_rule in all_rules
-                            )
-                        ),
-                    )
+        if spot.access_rule is SmsLocation.access_rule or spot.access_rule is Entrance.access_rule:
+            set_rule(spot, (lambda state, all_rules=tuple(req_rules): all(req_rule(state) for req_rule in all_rules)))
         else:
-            if (
-                spot.access_rule is SmsLocation.access_rule
-                or spot.access_rule is Entrance.access_rule
-            ):
-                set_rule(
-                    spot,
-                    (
-                        lambda state, all_rules=tuple(req_rules): all(
-                            req_rule(state) for req_rule in all_rules
-                        )
-                    ),
-                )
+            if isinstance(spot, SmsLocation):
+                sms_add_rule(spot, (lambda state, all_rules=tuple(req_rules):
+                    all(req_rule(state) for req_rule in req_rules)), combine="or")
             else:
-                if isinstance(spot, SmsLocation):
-                    add_rule(
-                        spot,
-                        (
-                            lambda state, all_rules=tuple(req_rules): all(
-                                req_rule(state) for req_rule in all_rules
-                            )
-                        ),
-                        combine="or",
-                    )
-                else:
-                    add_rule(
-                        spot,
-                        (
-                            lambda state, all_rules=tuple(req_rules): all(
-                                req_rule(state) for req_rule in all_rules
-                            )
-                        ),
-                    )
+                sms_add_rule(spot,
+                    (lambda state, all_rules=tuple(req_rules): all(req_rule(state) for req_rule in req_rules)))
     return
+
+
+def sms_add_rule(spot: SmsLocation | Entrance, rule: CollectionRule, combine="and"):
+    old_rule = spot.access_rule
+    # empty rule, replace instead of add
+    if old_rule is SmsLocation.access_rule or old_rule is Entrance.access_rule:
+        spot.access_rule = rule if combine == "and" else old_rule
+    else:
+        if combine == "and":
+            spot.access_rule = lambda state: rule(state) and old_rule(state)
+        else:
+            spot.access_rule = lambda state: (rule(state)) or old_rule(state)
 
 
 def create_sms_region_and_entrance_rules(world: "SmsWorld"):
@@ -225,7 +180,7 @@ def create_sms_region_and_entrance_rules(world: "SmsWorld"):
             for sms_loc in sms_reg.locations:
                 # Skip any event based locations that do not have this attribute
                 if hasattr(sms_loc, "loc_reqs"):
-                    interpret_requirements(sms_loc, sms_loc.loc_reqs, world, sms_loc.requirements_logic_any)
+                    interpret_requirements(sms_loc, sms_loc.loc_reqs, world)
 
                 # A Region cannot have its own ticket item in ticket mode, so prevent that.
                 if hasattr(sms_reg, "ticket_str") or region_ticket:
