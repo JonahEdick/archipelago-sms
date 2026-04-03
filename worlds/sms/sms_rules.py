@@ -225,7 +225,7 @@ def create_sms_region_and_entrance_rules(world: "SmsWorld"):
             for sms_loc in sms_reg.locations:
                 # Skip any event based locations that do not have this attribute
                 if hasattr(sms_loc, "loc_reqs"):
-                    interpret_requirements(sms_loc, sms_loc.loc_reqs, world)
+                    interpret_requirements(sms_loc, sms_loc.loc_reqs, world, sms_loc.requirements_logic_any)
 
                 # A Region cannot have its own ticket item in ticket mode, so prevent that.
                 if hasattr(sms_reg, "ticket_str") or region_ticket:
