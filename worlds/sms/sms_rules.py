@@ -170,11 +170,14 @@ def create_sms_region_and_entrance_rules(world: "SmsWorld"):
                     )
 
                 # If a parent region has any ticket str, get that ticket as well
-                if (
-                    hasattr(sms_entrance.parent_region, "ticket_str")
+                if (hasattr(sms_entrance.parent_region, "ticket_str")
                     and sms_entrance.parent_region.ticket_str
+                    and sms_entrance.parent_region == world.get_region(
+                        sms_entrance.parent_region.name
+                    )
                 ):
                     region_ticket = sms_entrance.parent_region.ticket_str
+                    break
 
             # Add the location rules within this region.
             for sms_loc in sms_reg.locations:
