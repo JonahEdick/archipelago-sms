@@ -14,7 +14,6 @@ class SmsLocation(Location):
     sms_region: "SmsRegion"
     loc_reqs: list["Requirements"]
     corona: bool
-    requirements_logic_any: bool
 
     def __init__(
         self,
@@ -22,13 +21,11 @@ class SmsLocation(Location):
         name: str,
         parent_region: "SmsRegion",
         reqs: list["Requirements"],
-        requirements_logic_any: bool = False,
     ):
         self.address = world.location_name_to_id[name]
         self.loc_reqs = reqs
         self.sms_region = parent_region
         self.corona = False if not reqs else any(loc_req.corona for loc_req in reqs)
-        self.requirements_logic_any = requirements_logic_any
         if parent_region.requirements:
             self.corona = self.corona or any(
                 reg_loc.corona for reg_loc in parent_region.requirements

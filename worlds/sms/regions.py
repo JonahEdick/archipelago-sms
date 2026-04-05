@@ -238,7 +238,6 @@ def create_region(region: SmsRegion, world: "SmsWorld"):
             f"{curr_region.name} - {shine.name}",
             region,
             get_correct_requirements(shine, world.options.difficulty),
-            True,
         )
         if region.trade:
             shine_loc.trades_req = True
@@ -251,7 +250,6 @@ def create_region(region: SmsRegion, world: "SmsWorld"):
                 f"{curr_region.name} - {blue_coin.name}",
                 region,
                 get_correct_requirements(blue_coin, world.options.difficulty),
-                True,
             )
             if world.options.blue_coin_sanity.value != 1:
                 curr_region.add_event(
