@@ -43,7 +43,7 @@ PIANTA_VILLAGE_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PIANTA_FOUR} - Chain Chomp's Bath",
+                    location=f"{SmsRegionName.PIANTA_FIVE} - Secret of the Village Underside",
                 ),
             ],
             advanced=[Requirements(SPRAY_OR_HOVER_OR_TURBO)],
@@ -55,21 +55,21 @@ PIANTA_VILLAGE_ONE: SmsRegion = SmsRegion(
                 Requirements([[NozzleType.spray]]),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PIANTA_FOUR} - Chain Chomp's Bath",
+                    location=f"{SmsRegionName.PIANTA_FIVE} - Secret of the Village Underside",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PIANTA_FOUR} - Chain Chomp's Bath",
+                    location=f"{SmsRegionName.PIANTA_FIVE} - Secret of the Village Underside",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PIANTA_FOUR} - Chain Chomp's Bath",
+                    location=f"{SmsRegionName.PIANTA_FIVE} - Secret of the Village Underside",
                 ),
             ],
             in_game_bit=443,
@@ -80,21 +80,21 @@ PIANTA_VILLAGE_ONE: SmsRegion = SmsRegion(
                 Requirements([[NozzleType.spray]]),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PIANTA_FOUR} - Chain Chomp's Bath",
+                    location=f"{SmsRegionName.PIANTA_FIVE} - Secret of the Village Underside",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PIANTA_FOUR} - Chain Chomp's Bath",
+                    location=f"{SmsRegionName.PIANTA_FIVE} - Secret of the Village Underside",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PIANTA_FOUR} - Chain Chomp's Bath",
+                    location=f"{SmsRegionName.PIANTA_FIVE} - Secret of the Village Underside",
                 ),
             ],
             in_game_bit=444,
@@ -105,14 +105,14 @@ PIANTA_VILLAGE_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PIANTA_FOUR} - Chain Chomp's Bath",
+                    location=f"{SmsRegionName.PIANTA_FIVE} - Secret of the Village Underside",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PIANTA_FOUR} - Chain Chomp's Bath",
+                    location=f"{SmsRegionName.PIANTA_FIVE} - Secret of the Village Underside",
                 ),
             ],
             in_game_bit=445,
@@ -123,14 +123,14 @@ PIANTA_VILLAGE_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PIANTA_FOUR} - Chain Chomp's Bath",
+                    location=f"{SmsRegionName.PIANTA_FIVE} - Secret of the Village Underside",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PIANTA_FOUR} - Chain Chomp's Bath",
+                    location=f"{SmsRegionName.PIANTA_FIVE} - Secret of the Village Underside",
                 ),
             ],
             in_game_bit=446,
@@ -141,14 +141,14 @@ PIANTA_VILLAGE_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PIANTA_FOUR} - Chain Chomp's Bath",
+                    location=f"{SmsRegionName.PIANTA_FIVE} - Secret of the Village Underside",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PIANTA_FOUR} - Chain Chomp's Bath",
+                    location=f"{SmsRegionName.PIANTA_FIVE} - Secret of the Village Underside",
                 ),
             ],
             in_game_bit=447,
@@ -161,14 +161,14 @@ PIANTA_VILLAGE_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_AND_ANY_FLUDD),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PIANTA_FOUR} - Chain Chomp's Bath",
+                    location=f"{SmsRegionName.PIANTA_FIVE} - Secret of the Village Underside",
                 ),
             ],
             tears=[
                 Requirements([[NozzleType.spray]]),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PIANTA_FOUR} - Chain Chomp's Bath",
+                    location=f"{SmsRegionName.PIANTA_FIVE} - Secret of the Village Underside",
                 ),
             ],
             in_game_bit=420,

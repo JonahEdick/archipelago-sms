@@ -94,14 +94,14 @@ GELATO_BEACH_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                    location=f"{SmsRegionName.GELATO_SIX} - Red Coins in the Coral Reef",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                    location=f"{SmsRegionName.GELATO_SIX} - Red Coins in the Coral Reef",
                 ),
             ],
             in_game_bit=276,
@@ -113,7 +113,7 @@ GELATO_BEACH_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                    location=f"{SmsRegionName.GELATO_SIX} - Red Coins in the Coral Reef",
                 ),
             ],
             in_game_bit=277,
@@ -125,14 +125,14 @@ GELATO_BEACH_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                    location=f"{SmsRegionName.GELATO_SIX} - Red Coins in the Coral Reef",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                    location=f"{SmsRegionName.GELATO_SIX} - Red Coins in the Coral Reef",
                 ),
             ],
             in_game_bit=278,
@@ -143,14 +143,14 @@ GELATO_BEACH_ONE: SmsRegion = SmsRegion(
                 Requirements([[NozzleType.spray]]),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                    location=f"{SmsRegionName.GELATO_SIX} - Red Coins in the Coral Reef",
                 ),
             ],
             tears=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                    location=f"{SmsRegionName.GELATO_SIX} - Red Coins in the Coral Reef",
                 ),
             ],
             in_game_bit=280,
@@ -161,14 +161,14 @@ GELATO_BEACH_ONE: SmsRegion = SmsRegion(
                 Requirements([[NozzleType.spray]]),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                    location=f"{SmsRegionName.GELATO_SIX} - Red Coins in the Coral Reef",
                 ),
             ],
             tears=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                    location=f"{SmsRegionName.GELATO_SIX} - Red Coins in the Coral Reef",
                 ),
             ],
             in_game_bit=281,
@@ -214,14 +214,14 @@ GELATO_BEACH_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                    location=f"{SmsRegionName.GELATO_SIX} - Red Coins in the Coral Reef",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                    location=f"{SmsRegionName.GELATO_SIX} - Red Coins in the Coral Reef",
                 ),
             ],
             in_game_bit=271,
@@ -232,14 +232,14 @@ GELATO_BEACH_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                    location=f"{SmsRegionName.GELATO_SIX} - Red Coins in the Coral Reef",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                    location=f"{SmsRegionName.GELATO_SIX} - Red Coins in the Coral Reef",
                 ),
             ],
             in_game_bit=272,
@@ -291,14 +291,14 @@ GELATO_BEACH_TWO: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                    location=f"{SmsRegionName.GELATO_SIX} - Red Coins in the Coral Reef",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                    location=f"{SmsRegionName.GELATO_SIX} - Red Coins in the Coral Reef",
                 ),
             ],
             in_game_bit=292,
@@ -390,7 +390,7 @@ GELATO_BEACH_FIVE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.GELATO_FIVE} - Il Piantissimo's Sand Sprint",
+                    location=f"{SmsRegionName.GELATO_SIX} - Red Coins in the Coral Reef",
                 ),
             ],
             [Requirements(manual_none=True)],

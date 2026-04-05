@@ -35,14 +35,14 @@ PINNA_PARK_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             in_game_bit=320,
@@ -53,14 +53,14 @@ PINNA_PARK_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             in_game_bit=321,
@@ -71,14 +71,14 @@ PINNA_PARK_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             in_game_bit=322,
@@ -89,21 +89,21 @@ PINNA_PARK_ONE: SmsRegion = SmsRegion(
                 Requirements([[NozzleType.spray]]),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             in_game_bit=323,
@@ -114,14 +114,14 @@ PINNA_PARK_ONE: SmsRegion = SmsRegion(
                 Requirements([[NozzleType.spray]]),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             tears=[
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             in_game_bit=324,
@@ -132,14 +132,14 @@ PINNA_PARK_ONE: SmsRegion = SmsRegion(
                 Requirements([[NozzleType.spray]]),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             tears=[
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             in_game_bit=325,
@@ -162,21 +162,21 @@ PINNA_PARK_ONE: SmsRegion = SmsRegion(
                 Requirements([[NozzleType.spray]]),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             in_game_bit=328,
@@ -187,21 +187,21 @@ PINNA_PARK_ONE: SmsRegion = SmsRegion(
                 Requirements([[NozzleType.spray]]),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             in_game_bit=329,
@@ -212,21 +212,21 @@ PINNA_PARK_ONE: SmsRegion = SmsRegion(
                 Requirements([[NozzleType.spray]]),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             in_game_bit=330,
@@ -237,7 +237,7 @@ PINNA_PARK_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             in_game_bit=331,
@@ -251,14 +251,14 @@ PINNA_PARK_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             in_game_bit=332,
@@ -269,21 +269,21 @@ PINNA_PARK_ONE: SmsRegion = SmsRegion(
                 Requirements([[NozzleType.spray]]),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             in_game_bit=333,
@@ -313,14 +313,14 @@ PINNA_PARK_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.PINNA_FOUR} - The Wilted Sunflowers",
+                    location=f"{SmsRegionName.PINNA_FIVE} - The Runaway Ferris Wheel",
                 ),
             ],
             in_game_bit=339,
