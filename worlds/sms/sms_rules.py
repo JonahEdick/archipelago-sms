@@ -1,6 +1,6 @@
 from typing import TYPE_CHECKING, Callable
 
-from BaseClasses import Entrance, CollectionState
+from BaseClasses import Entrance, CollectionState, Region
 from .sms_regions.sms_region_helper import SmsLocation, Requirements
 from ..generic.Rules import set_rule, add_item_rule, add_rule
 from .items import TICKET_ITEMS, REGULAR_PROGRESSION_ITEMS
@@ -104,18 +104,20 @@ def interpret_requirements(
             )
 
         if single_req.location:
-            req_rules.append(
-                lambda state, loc_name=single_req.location: state.can_reach_location(
-                    loc_name, world.player
-                )
-            )
+            req_rules.append(lambda state, loc_name=single_req.location: state.can_reach_location(
+                    loc_name, world.player))
+            ref_region: Region = world.get_location(single_req.location).parent_region
+
             if isinstance(spot, Entrance):
                 #  We use this to explicitly tell the generator that, when a given region becomes accessible,
-                #   it is necessary to re-check a specific entrance, as we determine if a user has access to a region if they
-                #   complete previous stars/regions.
-                world.multiworld.register_indirect_condition(
-                    world.get_location(single_req.location).parent_region, spot
-                )
+                #   it is necessary to re-check a specific entrance, as we determine if a user has access to a
+                #   region if they complete previous stars/regions.
+                world.multiworld.register_indirect_condition(ref_region, spot)
+            else:
+                # For locations, register against every entrance into the location's own parent region so
+                #   sweep knows to re-check when the referenced region becomes newly reachable.
+                for entrance in spot.parent_region.entrances:
+                    world.multiworld.register_indirect_condition(ref_region, entrance)
 
         if (
             world.corona_mountain_shines > 0 and (
