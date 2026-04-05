@@ -139,10 +139,10 @@ def interpret_requirements(
         else:
             if isinstance(spot, SmsLocation):
                 add_rule(spot, (lambda state, all_rules=tuple(req_rules):
-                    all(req_rule(state) for req_rule in req_rules)), combine="or")
+                    all(req_rule(state) for req_rule in all_rules)), combine="or")
             else:
                 add_rule(spot,
-                    (lambda state, all_rules=tuple(req_rules): all(req_rule(state) for req_rule in req_rules)))
+                    (lambda state, all_rules=tuple(req_rules): all(req_rule(state) for req_rule in all_rules)))
     return
 
 def create_sms_region_and_entrance_rules(world: "SmsWorld"):
