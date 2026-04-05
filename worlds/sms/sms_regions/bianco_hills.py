@@ -22,7 +22,7 @@ BIANCO_HILLS_ONE: SmsRegion = SmsRegion(
             requirements=[
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             hard=[
@@ -54,21 +54,21 @@ BIANCO_HILLS_ONE: SmsRegion = SmsRegion(
                 Requirements([[NozzleType.hover]]),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             in_game_bit=170,
@@ -79,14 +79,14 @@ BIANCO_HILLS_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER_OR_ROCKET),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             advanced=[
                 Requirements(ANY_FLUDD),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             in_game_bit=171,
@@ -97,14 +97,14 @@ BIANCO_HILLS_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             in_game_bit=188,
@@ -115,14 +115,14 @@ BIANCO_HILLS_ONE: SmsRegion = SmsRegion(
                 Requirements([[NozzleType.hover]]),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             hard=[
                 Requirements(ANY_FLUDD),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             in_game_bit=173,
@@ -134,14 +134,14 @@ BIANCO_HILLS_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             in_game_bit=186,
@@ -152,14 +152,14 @@ BIANCO_HILLS_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             in_game_bit=187,
@@ -170,7 +170,7 @@ BIANCO_HILLS_ONE: SmsRegion = SmsRegion(
                 Requirements(ROCKET_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             hard=[Requirements(manual_none=True)],
@@ -182,14 +182,14 @@ BIANCO_HILLS_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             in_game_bit=189,
@@ -200,14 +200,14 @@ BIANCO_HILLS_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             in_game_bit=190,
@@ -219,14 +219,14 @@ BIANCO_HILLS_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             in_game_bit=197,
@@ -237,7 +237,7 @@ BIANCO_HILLS_ONE: SmsRegion = SmsRegion(
                 Requirements([[NozzleType.hover]]),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             hard=[Requirements(manual_none=True)],
@@ -301,14 +301,14 @@ BIANCO_HILLS_THREE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             hard=[
                 Requirements(ANY_FLUDD),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             in_game_bit=174,
@@ -319,14 +319,14 @@ BIANCO_HILLS_THREE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             in_game_bit=175,
@@ -337,7 +337,7 @@ BIANCO_HILLS_THREE: SmsRegion = SmsRegion(
                 Requirements(ROCKET_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             hard=[Requirements(manual_none=True)],
@@ -349,14 +349,14 @@ BIANCO_HILLS_THREE: SmsRegion = SmsRegion(
                 Requirements(ROCKET_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             advanced=[
                 Requirements(ROCKET_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             in_game_bit=192,
@@ -421,14 +421,14 @@ BIANCO_HILLS_FIVE: SmsRegion = SmsRegion(
                 Requirements(SPROCKET_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             advanced=[
                 Requirements(SPROCKET_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             in_game_bit=177,
@@ -439,21 +439,21 @@ BIANCO_HILLS_FIVE: SmsRegion = SmsRegion(
                 Requirements(ROCKET_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER_OR_ROCKET),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             advanced=[
                 Requirements(ANY_FLUDD),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             in_game_bit=185,
@@ -491,14 +491,14 @@ BIANCO_HILLS_SIX: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER_OR_ROCKET),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             advanced=[
                 Requirements(ANY_FLUDD),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             in_game_bit=179,
@@ -545,7 +545,7 @@ BIANCO_HILLS_SEVEN: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             in_game_bit=194,
@@ -556,14 +556,14 @@ BIANCO_HILLS_SEVEN: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.BIANCO_SEVEN} - Shadow Mario on the Loose",
+                    location=f"{SmsRegionName.BIANCO_EIGHT} - The Red Coins of the Lake",
                 ),
             ],
             in_game_bit=195,
