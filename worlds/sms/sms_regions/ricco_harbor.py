@@ -24,7 +24,7 @@ RICCO_HARBOR_ONE: SmsRegion = SmsRegion(
             requirements=[
                 Requirements(ROCKET_OR_HOVER),
                 Requirements(
-                    location=f"{SmsRegionName.RICCO_FOUR} - The Secret of Ricco Tower"
+                    location=f"{SmsRegionName.RICCO_FIVE} - Gooper Blooper Returns"
                 ),
             ],
             hard=[Requirements(manual_none=True)],
@@ -39,21 +39,21 @@ RICCO_HARBOR_ONE: SmsRegion = SmsRegion(
                 Requirements([[NozzleType.spray]]),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.RICCO_SEVEN} - Shadow Mario Revisited",
+                    location=f"{SmsRegionName.RICCO_EIGHT} - Yoshi's Fruit Adventure",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.RICCO_SEVEN} - Shadow Mario Revisited",
+                    location=f"{SmsRegionName.RICCO_EIGHT} - Yoshi's Fruit Adventure",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.RICCO_SEVEN} - Shadow Mario Revisited",
+                    location=f"{SmsRegionName.RICCO_EIGHT} - Yoshi's Fruit Adventure",
                 ),
             ],
             in_game_bit=221,
@@ -64,14 +64,14 @@ RICCO_HARBOR_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.RICCO_SEVEN} - Shadow Mario Revisited",
+                    location=f"{SmsRegionName.RICCO_EIGHT} - Yoshi's Fruit Adventure",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.RICCO_SEVEN} - Shadow Mario Revisited",
+                    location=f"{SmsRegionName.RICCO_EIGHT} - Yoshi's Fruit Adventure",
                 ),
             ],
             in_game_bit=222,
@@ -82,14 +82,14 @@ RICCO_HARBOR_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.RICCO_SEVEN} - Shadow Mario Revisited",
+                    location=f"{SmsRegionName.RICCO_EIGHT} - Yoshi's Fruit Adventure",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.RICCO_SEVEN} - Shadow Mario Revisited",
+                    location=f"{SmsRegionName.RICCO_EIGHT} - Yoshi's Fruit Adventure",
                 ),
             ],
             in_game_bit=223,
@@ -101,14 +101,14 @@ RICCO_HARBOR_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.RICCO_SEVEN} - Shadow Mario Revisited",
+                    location=f"{SmsRegionName.RICCO_EIGHT} - Yoshi's Fruit Adventure",
                 ),
             ],
             advanced=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.RICCO_SEVEN} - Shadow Mario Revisited",
+                    location=f"{SmsRegionName.RICCO_EIGHT} - Yoshi's Fruit Adventure",
                 ),
             ],
             in_game_bit=224,
@@ -119,14 +119,14 @@ RICCO_HARBOR_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.RICCO_SEVEN} - Shadow Mario Revisited",
+                    location=f"{SmsRegionName.RICCO_EIGHT} - Yoshi's Fruit Adventure",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.RICCO_SEVEN} - Shadow Mario Revisited",
+                    location=f"{SmsRegionName.RICCO_EIGHT} - Yoshi's Fruit Adventure",
                 ),
             ],
             in_game_bit=226,
@@ -137,7 +137,7 @@ RICCO_HARBOR_ONE: SmsRegion = SmsRegion(
                 Requirements(SPROCKET_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.RICCO_SEVEN} - Shadow Mario Revisited",
+                    location=f"{SmsRegionName.RICCO_EIGHT} - Yoshi's Fruit Adventure",
                 ),
             ],
             tears=[Requirements(SPROCKET_OR_HOVER_OR_TURBO)],
@@ -178,13 +178,13 @@ RICCO_HARBOR_ONE: SmsRegion = SmsRegion(
             requirements=[
                 Requirements(ROCKET_OR_TURBO),
                 Requirements(
-                    location=f"{SmsRegionName.RICCO_ONE} - Ricco 1 Only - Gooper Blooper Breaks Out",
+                    location=f"{SmsRegionName.RICCO_TWO} - Blooper Surfing Safari",
                 ),
             ],
             advanced=[
                 Requirements(ROCKET_OR_HOVER_OR_TURBO),
                 Requirements(
-                    location=f"{SmsRegionName.RICCO_ONE} - Ricco 1 Only - Gooper Blooper Breaks Out",
+                    location=f"{SmsRegionName.RICCO_TWO} - Blooper Surfing Safari",
                 ),
             ],
             in_game_bit=235,
@@ -197,14 +197,14 @@ RICCO_HARBOR_ONE: SmsRegion = SmsRegion(
                 Requirements([[NozzleType.spray]]),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.RICCO_SEVEN} - Shadow Mario Revisited",
+                    location=f"{SmsRegionName.RICCO_EIGHT} - Yoshi's Fruit Adventure",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.RICCO_SEVEN} - Shadow Mario Revisited",
+                    location=f"{SmsRegionName.RICCO_EIGHT} - Yoshi's Fruit Adventure",
                 ),
             ],
             in_game_bit=239,
@@ -215,14 +215,14 @@ RICCO_HARBOR_ONE: SmsRegion = SmsRegion(
                 Requirements(SPRAY_OR_HOVER),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.RICCO_SEVEN} - Shadow Mario Revisited",
+                    location=f"{SmsRegionName.RICCO_EIGHT} - Yoshi's Fruit Adventure",
                 ),
             ],
             hard=[
                 Requirements(SPRAY_OR_HOVER_OR_TURBO),
                 Requirements(
                     [[NozzleType.yoshi]],
-                    location=f"{SmsRegionName.RICCO_SEVEN} - Shadow Mario Revisited",
+                    location=f"{SmsRegionName.RICCO_EIGHT} - Yoshi's Fruit Adventure",
                 ),
             ],
             in_game_bit=240,
