@@ -4,6 +4,9 @@ from .sms_region_helper import *
 SIRENA_BEACH_ENTRANCE: SmsRegion = SmsRegion(
     SmsRegionName.SIRENA_ENTRANCE,
     requirements=[Requirements([[NozzleType.yoshi]], shines=5), Requirements([[NozzleType.yoshi]], skip_forward=True)],
+    hard=[],
+    advanced=[],
+    tears=[],
     ticketed="Sirena Beach Ticket",
     parent_region=SmsRegionName.PLAZA,
 )
