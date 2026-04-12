@@ -168,7 +168,7 @@ class SmsContext(SuperContext):
             temp = slot_data.get("starting_nozzle")
             if temp:
                 self.fludd_start = temp
-            temp = slot_data.get("ticket_mode")
+            temp = slot_data.get("level_access")
             if temp:
                 self.ticket_mode = temp
 
@@ -398,6 +398,9 @@ async def dolphin_sync_task(ctx: SmsContext) -> None:
                         ticket_list: set[str] = set([ctx.item_names.lookup_in_game(recv_item.item).replace(" Ticket", "")
                             for recv_item in ctx.items_received if ctx.item_names.lookup_in_game(recv_item.item) in TICKET_ITEMS])
                         ctx.ui.update_ticket_list(ticket_list)
+                        flag_pointer = dme.read_word(addresses.SMS_FLAGS_PTR)
+                        boat_and_yoshi_flags = dme.read_byte(flag_pointer + addresses.DELFINO_YOSHI_OFFSET)
+                        dme.write_byte(flag_pointer + addresses.DELFINO_YOSHI_OFFSET, boat_and_yoshi_flags | 0x02)
 
                 await asyncio.sleep(0.1)
             else:
@@ -532,13 +535,6 @@ def parse_bits(all_bits, ctx: SmsContext, parse_type: str):
                     logger.info("checks to send: %s", possible_locs[0])
         elif x == 119:
             send_victory(ctx)
-
-
-def get_shine_id(location, value):
-    temp = location + value - dme.read_word(addresses.SMS_FLAGS_PTR)
-    shine_id = int(temp)
-    return shine_id
-
 
 def refresh_item_count(ctx, item_id, targ_address):
     counts = collections.Counter(received_item.item for received_item in ctx.items_received)
