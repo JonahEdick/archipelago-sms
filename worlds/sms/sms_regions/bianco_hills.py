@@ -589,7 +589,7 @@ BIANCO_HILLS_EIGHT: SmsRegion = SmsRegion(
     ],
     blue_coins=[
         BlueCoin("Beehive", [Requirements([[NozzleType.yoshi]])], in_game_bit=176),
-        BlueCoin("Butterfly", [Requirements([[NozzleType.yoshi]])], in_game_bit=177),
+        BlueCoin("Butterfly", [Requirements([[NozzleType.yoshi]])], in_game_bit=196),
     ],
     parent_region=SmsRegionName.BIANCO_ENTRANCE,
 )
