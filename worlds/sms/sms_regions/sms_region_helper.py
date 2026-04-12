@@ -1,7 +1,7 @@
 from enum import StrEnum
 from typing import Optional, NamedTuple, TYPE_CHECKING
 
-from BaseClasses import Location
+from BaseClasses import Location, Entrance
 from worlds.sms.options import Difficulty
 
 if TYPE_CHECKING:
@@ -193,8 +193,11 @@ class SmsRegion(NamedTuple):
 
 
 def get_correct_requirements(
-    item: Shine | BlueCoin | NozzleBox, difficulty: Difficulty
+    item: Shine | BlueCoin | NozzleBox | Entrance, difficulty: Difficulty
 ):
+    if not hasattr(item, "requirements"):
+        return []
+
     match difficulty.value:
         case 0:
             return item.requirements
