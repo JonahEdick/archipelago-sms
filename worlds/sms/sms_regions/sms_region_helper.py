@@ -181,6 +181,9 @@ class NozzleBox(NamedTuple):
 class SmsRegion(NamedTuple):
     name: str
     requirements: Optional[list[Requirements]] | None = None
+    hard: Optional[list[Requirements]] | None = None
+    advanced: Optional[list[Requirements]] | None = None
+    tears: Optional[list[Requirements]] | None = None
     shines: Optional[list[Shine]] | None = []
     blue_coins: Optional[list[BlueCoin]] | None = []
     nozzle_boxes: Optional[list[NozzleBox]] | None = []
