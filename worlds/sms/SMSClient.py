@@ -49,8 +49,8 @@ world_flags = {}
 
 DEBUG = False
 GAME_VER = 0x3a
-AP_WORLD_VERSION_NAME = "0.6.7"
-CLIENT_VERSION = "0.6.2"
+AP_WORLD_VERSION_NAME = "0.6.5"
+CLIENT_VERSION = "0.5.3"
 
 DME_DOLPHIN_PROCESS_NAME_ENV_VARIABLE = "DME_DOLPHIN_PROCESS_NAME"
 
@@ -168,7 +168,7 @@ class SmsContext(SuperContext):
             temp = slot_data.get("starting_nozzle")
             if temp:
                 self.fludd_start = temp
-            temp = slot_data.get("level_access")
+            temp = slot_data.get("ticket_mode")
             if temp:
                 self.ticket_mode = temp
 
@@ -275,7 +275,7 @@ async def game_watcher(ctx: SmsContext):
         if "DeathLink" in ctx.tags:
             await check_death(ctx, previous_lives)
             try:
-                previous_lives = dme.read_word(dme.read_word(addresses.SMS_FLAGS_PTR) + addresses.LIVES_COUNT_OFFSET)
+                previous_lives = get_lives()
             except:
                 pass
 
@@ -303,13 +303,14 @@ async def check_death(ctx: SmsContext, previous_lives):
         return
 
     try:
-        current_lives = dme.read_word(dme.read_word(addresses.SMS_FLAGS_PTR) + addresses.LIVES_COUNT_OFFSET)
-        if (current_lives < previous_lives != 255) or (current_lives == 0 and previous_lives == 255):
+        current_lives = get_lives()
+        if (current_lives < previous_lives != 4294967295) or (current_lives == 4294967295 and previous_lives == 0) and is_death_link_buffer() == False:
             if not ctx.has_send_death and time.time() >= ctx.last_death_link + 6: #prevent more double-deaths
                 ctx.has_send_death = True
                 player_name = ctx.player_names[ctx.slot] if ctx.slot in ctx.player_names else "Player"
                 await ctx.send_death(f"{player_name} died!")
                 logger.info(f"Sent DeathLink: Mario died (lives {previous_lives} -> {current_lives})")
+                disable_death_link_buffer()
         else:
             ctx.has_send_death = False
     except Exception as e:
@@ -398,9 +399,6 @@ async def dolphin_sync_task(ctx: SmsContext) -> None:
                         ticket_list: set[str] = set([ctx.item_names.lookup_in_game(recv_item.item).replace(" Ticket", "")
                             for recv_item in ctx.items_received if ctx.item_names.lookup_in_game(recv_item.item) in TICKET_ITEMS])
                         ctx.ui.update_ticket_list(ticket_list)
-                        flag_pointer = dme.read_word(addresses.SMS_FLAGS_PTR)
-                        boat_and_yoshi_flags = dme.read_byte(flag_pointer + addresses.DELFINO_YOSHI_OFFSET)
-                        dme.write_byte(flag_pointer + addresses.DELFINO_YOSHI_OFFSET, boat_and_yoshi_flags | 0x02)
 
                 await asyncio.sleep(0.1)
             else:
@@ -536,6 +534,13 @@ def parse_bits(all_bits, ctx: SmsContext, parse_type: str):
         elif x == 119:
             send_victory(ctx)
 
+
+def get_shine_id(location, value):
+    temp = location + value - dme.read_word(addresses.SMS_FLAGS_PTR)
+    shine_id = int(temp)
+    return shine_id
+
+
 def refresh_item_count(ctx, item_id, targ_address):
     counts = collections.Counter(received_item.item for received_item in ctx.items_received)
     temp = change_endian(counts[item_id])
@@ -669,6 +674,21 @@ def activate_yoshi(ctx):
         ctx.ap_nozzles_received.append(4)
     return
 
+sms_death_link_buffer = False
+
+def enable_death_link_buffer():
+    global sms_death_link_buffer
+    sms_death_link_buffer = True
+
+def disable_death_link_buffer():
+    global sms_death_link_buffer
+    sms_death_link_buffer = False
+
+def is_death_link_buffer():
+    return sms_death_link_buffer
+
+def log_death_buffer_state():
+    logger.info(f"Death Buffer state: {sms_death_link_buffer}")
 
 def kill_mario(ctx: SmsContext):
     """Uses the same logic as Gecko code death trigger"""
@@ -680,10 +700,13 @@ def kill_mario(ctx: SmsContext):
 
             dme.write_bytes(actual_target, (0x4020).to_bytes(2, byteorder="big"))
             ctx.has_send_death = True
+            enable_death_link_buffer()
         except Exception as e:
             logger.error(f"Failed to kill Mario - connection may be lost: {e}")
     return
 
+def get_lives():
+    return dme.read_word(dme.read_word(addresses.SMS_FLAGS_PTR) + addresses.LIVES_COUNT_OFFSET)
 
 async def resolve_tickets(stage, ctx):
     for tick in TICKETS:
@@ -692,7 +715,6 @@ async def resolve_tickets(stage, ctx):
             # Byte 1 should correspond to Delfino Plaza
             dme.write_byte(addresses.SMS_NEXT_STAGE, 1)
             dme.write_byte(addresses.SMS_CURRENT_STAGE, 1)
-            await send_map_id(1, ctx)
         else:
             await send_map_id(stage, ctx)
     return
