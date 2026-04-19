@@ -49,8 +49,8 @@ world_flags = {}
 
 DEBUG = False
 GAME_VER = 0x3a
-AP_WORLD_VERSION_NAME = "0.6.5"
-CLIENT_VERSION = "0.5.3"
+AP_WORLD_VERSION_NAME = "0.6.7"
+CLIENT_VERSION = "0.6.2"
 
 DME_DOLPHIN_PROCESS_NAME_ENV_VARIABLE = "DME_DOLPHIN_PROCESS_NAME"
 
@@ -168,7 +168,7 @@ class SmsContext(SuperContext):
             temp = slot_data.get("starting_nozzle")
             if temp:
                 self.fludd_start = temp
-            temp = slot_data.get("ticket_mode")
+            temp = slot_data.get("level_access")
             if temp:
                 self.ticket_mode = temp
 
@@ -235,6 +235,7 @@ curNozzleBoxes = []
 
 DELAY_SECONDS = .5
 LOCATION_OFFSET = 523000
+GAME_OVER_LIFE_COUNT = 4294967295
 
 def read_string(console_address: int, strlen: int) -> str:
     return dme.read_bytes(console_address, strlen).split(b"\0", 1)[0].decode()
@@ -304,13 +305,14 @@ async def check_death(ctx: SmsContext, previous_lives):
 
     try:
         current_lives = get_lives()
-        if (current_lives < previous_lives != 4294967295) or (current_lives == 4294967295 and previous_lives == 0) and is_death_link_buffer() == False:
-            if not ctx.has_send_death and time.time() >= ctx.last_death_link + 6: #prevent more double-deaths
-                ctx.has_send_death = True
-                player_name = ctx.player_names[ctx.slot] if ctx.slot in ctx.player_names else "Player"
-                await ctx.send_death(f"{player_name} died!")
-                logger.info(f"Sent DeathLink: Mario died (lives {previous_lives} -> {current_lives})")
-                disable_death_link_buffer()
+        if (current_lives < previous_lives != GAME_OVER_LIFE_COUNT) or (current_lives == GAME_OVER_LIFE_COUNT and previous_lives == 0):
+            if not death_link_buffer_enabled():
+                if not ctx.has_send_death and time.time() >= ctx.last_death_link + 6: #prevent more double-deaths
+                    ctx.has_send_death = True
+                    player_name = ctx.player_names[ctx.slot] if ctx.slot in ctx.player_names else "Player"
+                    await ctx.send_death(f"{player_name} died!")
+                    logger.info(f"Sent DeathLink: Mario died (lives {previous_lives} -> {current_lives})")
+            disable_death_link_buffer()
         else:
             ctx.has_send_death = False
     except Exception as e:
@@ -684,7 +686,7 @@ def disable_death_link_buffer():
     global sms_death_link_buffer
     sms_death_link_buffer = False
 
-def is_death_link_buffer():
+def death_link_buffer_enabled():
     return sms_death_link_buffer
 
 def log_death_buffer_state():
